@@ -55,7 +55,7 @@ const Navbar = () => {
 };
 
 const StyledNav = styled.nav`
-  background-color: #c7bebf;
+  background-color: #e4ebea;
   padding: 0 1rem;
   height: 700px;
   width: 10%;

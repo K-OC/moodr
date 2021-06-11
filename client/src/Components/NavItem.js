@@ -99,6 +99,10 @@ const StyledLi = styled.li`
   justify-content: center;
   padding: 10px;
   border: 1px solid yellow;
+  background-color: #a7beb9;
+  &:hover {
+    box-shadow: 1px 1px #60464a;
+  }
 `;
 const FadeIn = keyframes`
 0% {
@@ -117,9 +121,6 @@ const StyledLink = styled(Link)`
   align-items: center;
   justify-content: center;
   margin: 0;
-  &:hover {
-    box-shadow: 1px 1px #60464a;
-  }
 `;
 
 const StyledSubLink = styled(Link)`
