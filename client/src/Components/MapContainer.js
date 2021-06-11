@@ -61,6 +61,8 @@ export const MapContainer = () => {
     setCenter,
     locality,
     setLocality,
+    zoom,
+    setZoom,
   } = useContext(CurrentUserContext);
   const [clicked, setClicked] = useState([]);
   const { isLoaded, loadError } = useLoadScript({
@@ -138,7 +140,7 @@ export const MapContainer = () => {
 
             <GoogleMap
               mapContainerStyle={mapContainerStyle}
-              zoom={3}
+              zoom={zoom}
               options={options}
               onLoad={onMapLoad}
               center={center}
@@ -229,6 +231,7 @@ const Wrapper = styled.div`
   max-width: fit-content;
   overflow: hidden;
   height: 700px;
+  background-color: #c7bebf;
 `;
 
 const TimeWrapper = styled.div`

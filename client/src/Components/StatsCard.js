@@ -30,6 +30,10 @@ function StatsCard() {
     moodrList,
     locality,
     setLocality,
+    center,
+    setCenter,
+    zoom,
+    setZoom,
   } = useContext(CurrentUserContext);
   const sortedMoodrs = moodrList.reverse();
 
@@ -41,8 +45,13 @@ function StatsCard() {
         sortedMoodrs.map((moodr) => {
           return (
             <>
-              <CrowBaby src="../assets/crow.svg" />
-              <MoodrWrapper>
+              {/* <CrowBaby src="../assets/crow.svg" /> */}
+              <MoodrWrapper
+                onClick={() => {
+                  setCenter({ lat: moodr.lat, lng: moodr.lng });
+                  setZoom(15);
+                }}
+              >
                 <MoodWrapper>
                   <PersistantPees>Mood:</PersistantPees>
                   <Mood>{moodr.name}</Mood>
@@ -75,20 +84,28 @@ const Wrapper = styled.div`
   flex-direction: column-reverse;
   max-width: 25vw;
   max-height: 695px;
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
+  background-color: #c7bebf;
   overflow: scroll;
   font-size: 15px;
   font-family: "Teko", sans-serif;
 `;
-const MoodrWrapper = styled.div`
+const MoodrWrapper = styled(Link)`
   display: flex;
   flex-direction: row;
   padding: 3px;
   border: 3px solid #add8e6;
   width: fit-content;
   flex-wrap: wrap;
+  text-decoration: none;
+  background-color: #e4ebea;
+  color: black;
+  border-radius: 10%;
+
+  &:hover {
+    color: #eff3f2;
+    background-color: #a7beb9;
+    box-shadow: 0px 1px #351b1f;
+  }
 `;
 const LatLng = styled.div`
   max-width: fit-content;

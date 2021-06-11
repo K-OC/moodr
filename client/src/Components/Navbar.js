@@ -55,18 +55,24 @@ const Navbar = () => {
 };
 
 const StyledNav = styled.nav`
-  background-color: var(--bg);
+  background-color: #c7bebf;
   padding: 0 1rem;
-  height: 60px;
+  height: 700px;
+  width: 10%;
   border: 1px solid cyan;
+  display: flex;
+  flex-direction: column;
+  display: flex;
 `;
 
 const StyledUl = styled.ul`
   max-width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
   list-style: none;
+  justify-content: space-evenly;
+
   margin: 0;
   padding: 0;
   border: 1px solid lime;

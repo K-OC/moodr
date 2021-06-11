@@ -17,15 +17,16 @@ function App() {
     <BrowserRouter>
       <GlobalStyle />
       <Header />
+
       <Switch>
         <Route path="/" exact>
           <Wrapper>
             <StatsCard />
             <MapContainer />
+            <Navbar />
           </Wrapper>
           <Survey />
           {/* <DropdownMenu /> */}
-          <Navbar />
         </Route>
       </Switch>
       {/* <FooterWrapper>
@@ -38,6 +39,7 @@ const Wrapper = styled.div`
   display: flex;
   width: auto;
   position: relative;
+  font-family: var (--font-family);
 `;
 
 const FooterWrapper = styled.div`

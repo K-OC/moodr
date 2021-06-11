@@ -100,7 +100,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 100vw;
-  height: 40vh;
+  height: 100%;
 `;
 const SecondWrapper = styled.div`
   display: flex;
@@ -116,12 +116,10 @@ const SecondWrapper = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
-  font-family: "Teko", sans-serif;
   font-weight: bold;
 `;
 const EmotionClass = styled(Link)`
   font-size: 20px;
-  font-family: "Teko", sans-serif;
   text-decoration: none;
 `;
 

@@ -36,7 +36,7 @@ export const CurrentUserProvider = ({ children }) => {
   const [clickLocation, setClickLocation] = useState([]);
   const [dropdownClick, setDropdownClick] = useState(false);
   const [locality, setLocality] = useState([]);
-
+  const [zoom, setZoom] = useState(3);
   const [center, setCenter] = useState({
     lat: 41.3851,
     lng: 2.1734,
@@ -83,6 +83,8 @@ export const CurrentUserProvider = ({ children }) => {
         setCenter,
         locality,
         setLocality,
+        zoom,
+        setZoom,
       }}
     >
       {children}

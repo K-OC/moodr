@@ -91,8 +91,10 @@ const Wrapper = styled.div`
   font-family: var(--font-family);
 `;
 
+const SubWrap = styled.div``;
+
 const StyledLi = styled.li`
-  display: block;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   padding: 10px;
@@ -110,28 +112,24 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  border: 3px solid white;
   height: 60px;
   width: 80px;
   align-items: center;
   justify-content: center;
   margin: 0;
   &:hover {
-    border: 1px solid black;
+    box-shadow: 1px 1px #60464a;
   }
 `;
 
 const StyledSubLink = styled(Link)`
-  display: flex;
-  position: relative;
+  /* display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  align-items: center; */
+  /* align-items: flex-start; */
   text-decoration: none;
   min-height: 100%;
-  overflow: visible;
   min-width: 100px;
-
   &:hover {
     border: 1px solid cyan;
   }
