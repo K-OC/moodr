@@ -129,11 +129,14 @@ const StyledInput = styled.input`
 `;
 
 const StyledButton = styled.button`
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
   background-color: #add8e6;
   color: white;
   font-size: 20px;
-  max-height: 50px;
-  width: 100px;
+  width: 150px;
   margin: 0;
   &:active {
     background-color: #ffffff;
@@ -147,6 +150,9 @@ const StyledForm = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #add8e6;
+  width: 100%;
+  margin-top: 40px;
 `;
 
 // export const UserSubmit = () => {

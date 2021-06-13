@@ -57,6 +57,7 @@ const NavItem = () => {
                       ? e.children.map((ele) => {
                           return (
                             <>
+                              <GlobalStyle />
                               <StyledSubLink
                                 onClick={() => setUserEmotion(ele)}
                                 style={{
@@ -83,44 +84,31 @@ const NavItem = () => {
 
 const Wrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid fuchsia;
-  z-index: 10;
-  max-height: fit-content;
+  /* align-items: center;
+  justify-content: center; */
   font-family: var(--font-family);
+  z-index: 10;
 `;
 
 const SubWrap = styled.div``;
 
 const StyledLi = styled.li`
   display: inline-block;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border: 1px solid yellow;
-  background-color: #a7beb9;
-  &:hover {
-    box-shadow: 1px 1px #60464a;
-  }
+  align-content: center;
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 2px;
+  width: 120px;
+  z-index: 10;
 `;
-const FadeIn = keyframes`
-0% {
-opacity: 0.5;
-}
-100%{
-  opacity: 1;
-}
-`;
+
 const StyledLink = styled(Link)`
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  height: 60px;
-  width: 80px;
-  align-items: center;
-  justify-content: center;
   margin: 0;
+  font-family: var(--font-family);
+  font-size: 20px;
 `;
 
 const StyledSubLink = styled(Link)`
@@ -129,11 +117,7 @@ const StyledSubLink = styled(Link)`
   align-items: center; */
   /* align-items: flex-start; */
   text-decoration: none;
-  min-height: 100%;
-  min-width: 100px;
-  &:hover {
-    border: 1px solid cyan;
-  }
+  font-family: var(--font-family);
 `;
 
 export default NavItem;

@@ -55,27 +55,20 @@ const Navbar = () => {
 };
 
 const StyledNav = styled.nav`
-  background-color: #e4ebea;
-  padding: 0 1rem;
-  height: 700px;
-  width: 10%;
-  border: 1px solid cyan;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  display: flex;
+  position: absolute;
+  z-index: 1000;
 `;
 
 const StyledUl = styled.ul`
-  max-width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: column;
   list-style: none;
+  width: 100%;
   justify-content: space-evenly;
-
   margin: 0;
   padding: 0;
-  border: 1px solid lime;
 `;
 
 export default Navbar;

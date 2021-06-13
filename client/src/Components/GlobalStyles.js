@@ -2,8 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const breakpoints = { tablet: "600px" };
 
-const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap');
+export default createGlobalStyle`
 
     :root {
     --font-family: "Fira", sans-serif;
@@ -62,5 +61,3 @@ const GlobalStyle = createGlobalStyle`
       font-size: 28px;
     }
 `;
-
-export default GlobalStyle;

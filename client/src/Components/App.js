@@ -6,32 +6,30 @@ import Header from "./Header";
 import StatsCard from "./StatsCard";
 import GetLocation from "./GetLocation";
 import Dropdown from "react-dropdown";
-import { Survey } from "./Survey";
-import DropdownMenu from "./DropdownMenu";
+// import { Survey } from "./Survey";
 import GlobalStyle from "./GlobalStyles";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <Header />
-
+      <SecondWrapper>
+        <Header />
+      </SecondWrapper>
       <Switch>
         <Route path="/" exact>
           <Wrapper>
             <StatsCard />
             <MapContainer />
-            <Navbar />
           </Wrapper>
-          <Survey />
+
           {/* <DropdownMenu /> */}
         </Route>
       </Switch>
-      {/* <FooterWrapper>
+      <FooterWrapper>
         <Footer />
-      </FooterWrapper> */}
+      </FooterWrapper>
     </BrowserRouter>
   );
 }
@@ -39,9 +37,13 @@ const Wrapper = styled.div`
   display: flex;
   width: auto;
   position: relative;
-  font-family: var (--font-family);
+  font-family: var(--font-family);
 `;
 
+const SecondWrapper = styled.div`
+  width: 100%;
+  background-color: #add8e6;
+`;
 const FooterWrapper = styled.div`
   position: absolute;
   bottom: 0px;

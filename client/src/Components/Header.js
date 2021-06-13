@@ -1,6 +1,9 @@
 import React, { useState, useEffect, component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Survey } from "./Survey.js";
+import Navbar from "./Navbar";
+
 // import GlobalStyles from "./GlobalStyles";
 
 function Header() {
@@ -10,6 +13,11 @@ function Header() {
         <StyledHeader>
           <StyledLink to="/">Moodr</StyledLink>
         </StyledHeader>
+        <ContentWrapper>
+          <Navbar />
+          <Survey />
+        </ContentWrapper>
+
         <StyledSignIn>
           <StyledLink to="/signin">
             <StyledLogo src="../assets/crow.svg" />
@@ -35,36 +43,47 @@ const TopOfPage = styled.header`
   display: flex;
   justify-content: space-between;
   background-color: #add8e6;
-  height: 5vh;
+  width: 100vw;
+  min-height: 15vh;
   margin: 0;
   padding: 0;
-  width: auto;
 `;
 
 const StyledLogo = styled.img`
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
+  background-color: #add8e6;
+  margin: 0;
+  padding: 0;
 `;
 
 const StyledHeader = styled.span`
   display: flex;
-  font-family: "Teko", sans-serif;
   font-size: 30px;
   color: black;
   align-items: center;
+  background-color: #add8e6;
 `;
 
 const StyledSignIn = styled.span`
   display: flex;
   color: white;
-  font-family: "Teko", sans-serif;
   font-size: 20px;
+  margin: 0;
+  background-color: #add8e6;
+
   align-items: center;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
+  background-color: #add8e6;
 `;
 
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #add8e6;
+`;
 export default Header;

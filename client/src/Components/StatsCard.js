@@ -113,7 +113,7 @@ const LatLng = styled.div`
 const LatLngWrap = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 1px;
+  padding: 3px;
   width: 100%;
   align-items: center;
 `;

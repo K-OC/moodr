@@ -109,9 +109,6 @@ const SecondWrapper = styled.div`
   padding: 5px;
   align-items: center;
   justify-content: center;
-  &:hover {
-    border: 1px solid black;
-  }
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
