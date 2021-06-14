@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Marker = ({ lat, lng }) => {
-  console.log("hello", lat, lng);
   const pos = { lat: { lat }, lng: { lng } };
   return (
     <>

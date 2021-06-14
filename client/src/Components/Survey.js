@@ -70,7 +70,6 @@ export const Survey = () => {
     getAddressFromPosition(`${lat}`, `${lng}`).then((response) =>
       setLocality(response)
     );
-    console.log("response", locality);
     const date = new Date();
     let emoObj = {};
     emoObj.emoDate = format(date, "EEEE,MMMM do, yyyy hh:mm a");
@@ -96,7 +95,6 @@ export const Survey = () => {
         // window.location.href = "/confirmed";
       });
   };
-  console.log(moodrList, "ma mood list lolz");
 
   return (
     <>

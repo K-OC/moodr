@@ -92,10 +92,7 @@ const deleteMoodr = async (req, res) => {
     const result = await db.collection("moodrs").deleteOne({
       _id: ObjectID(_id),
     });
-    // const find = await db.collection("moodrs").findOne({
-    //   _id: ObjectID(req.body),
-    // });
-    // console.log(find, "find");
+
     if (result) {
       res.status(200).json({
         status: 200,

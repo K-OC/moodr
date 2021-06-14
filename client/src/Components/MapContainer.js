@@ -96,7 +96,6 @@ export const MapContainer = () => {
     ];
     setClickLocation(pos);
     setCenter(clickLocation);
-    // console.log("test", clickLocation);
   };
 
   const position = {

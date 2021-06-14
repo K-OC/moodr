@@ -24,7 +24,6 @@ function DropdownMenu() {
       .then((response) => response.json())
       .then((json) => {
         setEmotions(json.data);
-        console.log("test.", emotions);
         setComponentState("loaded");
       });
   }, []);
@@ -69,7 +68,6 @@ function DropdownMenu() {
 
                   {dropdownClick === true
                     ? e.children.map((ele) => {
-                        // console.log("test", ele);
                         return (
                           <>
                             <SecondWrapper
@@ -77,7 +75,6 @@ function DropdownMenu() {
                                 "background-color": e.color,
                               }}
                             >
-                              {console.log(e.color)}
                               <StyledLink
                                 onClick={(ev) => {
                                   setUserEmotion(ele);

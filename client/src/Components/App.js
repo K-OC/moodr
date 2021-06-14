@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 import { MapContainer } from "./MapContainer";
 import Header from "./Header";
-import StatsCard from "./StatsCard";
+import MainFeed from "./MainFeed";
 import About from "./About";
 import GlobalStyle from "./GlobalStyles";
 import Footer from "./Footer";
@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Wrapper>
-            <StatsCard />
+            <MainFeed />
             <MapContainer />
           </Wrapper>
         </Route>

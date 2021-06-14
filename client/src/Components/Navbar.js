@@ -37,7 +37,6 @@ const Navbar = () => {
       .then((response) => response.json())
       .then((json) => {
         setEmotions(json.data);
-        console.log("test.", emotions);
         setComponentState("loaded");
       });
   }, []);

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { CurrentUserContext } from "../CurrentUserContext";
 import SpinningLogo from "./SpinningLogo";
-function StatsCard() {
+function MainFeed() {
   const {
     lat,
     setLat,
@@ -155,4 +155,4 @@ const EmoColor = styled.div`
   border-radius: 100%;
 `;
 
-export default StatsCard;
+export default MainFeed;
