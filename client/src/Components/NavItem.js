@@ -29,6 +29,8 @@ const NavItem = () => {
     moodrList,
     center,
     setCenter,
+    emotionColor,
+    setEmotionColor,
   } = useContext(CurrentUserContext);
   const [open, setOpen] = useState(false);
   const [clicked, setClicked] = useState([]);
@@ -47,6 +49,7 @@ const NavItem = () => {
                     onClick={() => {
                       setOpen(!open);
                       setClicked(e._id);
+                      setEmotionColor(e.color);
                     }}
                     style={{ color: "white", "background-color": e.color }}
                   >
@@ -56,7 +59,9 @@ const NavItem = () => {
                           return (
                             <>
                               <StyledSubLink
-                                onClick={() => setUserEmotion(ele)}
+                                onClick={() => {
+                                  setUserEmotion(ele);
+                                }}
                                 style={{
                                   color: "white",
                                   "background-color": e.color,
@@ -103,10 +108,12 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0;
+  padding: 2px;
   font-size: 20px;
-  &:selected {
-    box-shadow: 2px 2px black;
+  &:hover {
+    box-shadow: 1px 1px black;
   }
 `;
 
@@ -116,6 +123,7 @@ const StyledSubLink = styled(Link)`
   align-items: center; */
   /* align-items: flex-start; */
   text-decoration: none;
+  padding: 1px;
   &:hover {
     border: 1px solid white;
   }

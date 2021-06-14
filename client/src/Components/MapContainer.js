@@ -175,6 +175,9 @@ export const MapContainer = () => {
                           >
                             <MoodrWrapper>
                               <MoodWrapper>
+                                <EmoColor
+                                  style={{ "background-color": mood.color }}
+                                ></EmoColor>
                                 <PersistantPees>Mood:</PersistantPees>
                                 <Mood>{mood.name}</Mood>
                               </MoodWrapper>
@@ -291,8 +294,15 @@ const Mood = styled.div`
 `;
 const MoodWrapper = styled.div`
   display: flex;
+  align-items: center;
 `;
 const Time = styled.p``;
+
+const EmoColor = styled.div`
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+`;
 
 // export const MapContainer = () => {
 //   const {

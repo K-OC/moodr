@@ -59,11 +59,14 @@ export const Survey = () => {
     setMoodrList,
     locality,
     setLocality,
+    emotionColor,
+    setEmotionColor,
   } = useContext(CurrentUserContext);
 
   const onClick = (ev) => {
     ev.preventDefault();
     setMarker(true);
+
     getAddressFromPosition(`${lat}`, `${lng}`).then((response) =>
       setLocality(response)
     );
@@ -75,6 +78,7 @@ export const Survey = () => {
     emoObj.lat = lat;
     emoObj.lng = lng;
     emoObj.locality = `${locality}`;
+    emoObj.color = emotionColor;
     const newMoodr = moodrList.slice();
     newMoodr.push(emoObj);
     setMoodrList(newMoodr);
@@ -111,7 +115,6 @@ export const Survey = () => {
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -137,8 +140,9 @@ const StyledButton = styled.button`
   justify-content: center;
   background-color: #add8e6;
   color: white;
-  font-size: 25px;
+  padding: 4px;
   margin: 0;
+  font-size: 20px;
   &:active {
     background-color: #ffffff;
     color: #add8e6;

@@ -15,6 +15,8 @@ function DropdownMenu() {
     setUserEmotion,
     dropdownClick,
     setDropdownClick,
+    emotionColor,
+    setEmotionColor,
   } = useContext(CurrentUserContext);
 
   useEffect(() => {
@@ -55,6 +57,7 @@ function DropdownMenu() {
                     onClick={(ev) => {
                       if (dropdownClick === false) {
                         setDropdownClick(true);
+                        setEmotionColor(e.color);
                       } else {
                         setDropdownClick(false);
                       }

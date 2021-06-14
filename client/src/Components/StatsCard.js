@@ -34,6 +34,8 @@ function StatsCard() {
     setCenter,
     zoom,
     setZoom,
+    emotionColor,
+    setEmotionColor,
   } = useContext(CurrentUserContext);
   const sortedMoodrs = moodrList.reverse();
 
@@ -53,6 +55,9 @@ function StatsCard() {
                 }}
               >
                 <MoodWrapper>
+                  <EmoColor
+                    style={{ "background-color": moodr.color }}
+                  ></EmoColor>
                   <PersistantPees>Mood:</PersistantPees>
                   <Mood>{moodr.name}</Mood>
                 </MoodWrapper>
@@ -142,6 +147,12 @@ const TimeWrapper = styled.div`
 const CrowBaby = styled.img`
   max-height: 20px;
   max-width: 20px;
+`;
+
+const EmoColor = styled.div`
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
 `;
 
 export default StatsCard;

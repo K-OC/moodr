@@ -50,6 +50,7 @@ const Blurb = styled.div`
   &:hover {
     background-color: #add8e6;
     color: white;
+    border: 1px solid black;
   }
 `;
 
