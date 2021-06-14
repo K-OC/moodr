@@ -118,6 +118,9 @@ const StyledLink = styled(Link)`
 const EmotionClass = styled(Link)`
   font-size: 20px;
   text-decoration: none;
+  &:hover {
+    border-bottom: 1px solid white;
+  }
 `;
 
 export default DropdownMenu;

@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { CurrentUserContext } from "../CurrentUserContext";
 import { Link } from "react-router-dom";
-import GlobalStyle from "./GlobalStyles";
 const NavItem = () => {
   const {
     lat,
@@ -42,7 +41,6 @@ const NavItem = () => {
           return (
             <>
               <Wrapper>
-                <GlobalStyle />
                 <StyledLi>
                   <StyledLink
                     href="#"
@@ -57,7 +55,6 @@ const NavItem = () => {
                       ? e.children.map((ele) => {
                           return (
                             <>
-                              <GlobalStyle />
                               <StyledSubLink
                                 onClick={() => setUserEmotion(ele)}
                                 style={{
@@ -107,8 +104,10 @@ const StyledLink = styled(Link)`
   display: flex;
   flex-direction: column;
   margin: 0;
-  font-family: var(--font-family);
   font-size: 20px;
+  &:selected {
+    box-shadow: 2px 2px black;
+  }
 `;
 
 const StyledSubLink = styled(Link)`
@@ -117,7 +116,9 @@ const StyledSubLink = styled(Link)`
   align-items: center; */
   /* align-items: flex-start; */
   text-decoration: none;
-  font-family: var(--font-family);
+  &:hover {
+    border: 1px solid white;
+  }
 `;
 
 export default NavItem;
