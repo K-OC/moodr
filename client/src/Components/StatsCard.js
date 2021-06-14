@@ -86,8 +86,7 @@ const Wrapper = styled.div`
   max-height: 695px;
   background-color: #c7bebf;
   overflow: scroll;
-  font-size: 15px;
-  font-family: "Teko", sans-serif;
+  font-size: 17px;
 `;
 const MoodrWrapper = styled(Link)`
   display: flex;

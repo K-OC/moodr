@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import styled, { withTheme } from "styled-components";
 import { Link } from "react-router-dom";
-
+import GlobalStyle from "./GlobalStyles";
 import { CurrentUserContext } from "../CurrentUserContext";
 function DropdownMenu() {
   const {
@@ -48,6 +48,7 @@ function DropdownMenu() {
           {emotions.map((e) => {
             return (
               <>
+                <GlobalStyle />
                 <div>
                   <EmotionClass
                     key={e._id}
@@ -113,7 +114,6 @@ const SecondWrapper = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
-  font-weight: bold;
 `;
 const EmotionClass = styled(Link)`
   font-size: 20px;

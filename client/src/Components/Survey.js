@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { CurrentUserContext } from "../CurrentUserContext";
 import styled from "styled-components";
+import GlobalStyle from "./GlobalStyles";
+
 import { formatRelative, format, set } from "date-fns";
 const opencage = require("opencage-api-client");
 require("dotenv").config();
@@ -99,7 +101,7 @@ export const Survey = () => {
           <UserPrompt>Today, I am feeling:</UserPrompt>
           <StyledInput type="text-area" value={userEmotion.name}></StyledInput>
           <StyledButton type="submit" onClick={onClick}>
-            share moodr
+            share
           </StyledButton>
         </StyledForm>
       </Wrapper>
@@ -116,7 +118,6 @@ const Wrapper = styled.div`
 `;
 const UserPrompt = styled.p`
   font-size: 25px;
-  font-family: "Teko", sans-serif;
   padding-right: 15px;
 `;
 
@@ -125,6 +126,7 @@ const StyledInput = styled.input`
   border: none;
   width: fit-content;
   margin: 0;
+  font-family: var(--font-family);
   border-bottom: 3px solid #add8e6;
 `;
 
@@ -135,13 +137,12 @@ const StyledButton = styled.button`
   justify-content: center;
   background-color: #add8e6;
   color: white;
-  font-size: 20px;
-  width: 150px;
+  font-size: 25px;
   margin: 0;
   &:active {
     background-color: #ffffff;
     color: #add8e6;
-    box-shadow: 0 2px #666;
+    box-shadow: 0 1px #666;
     transform: translateY(1px);
   }
 `;
