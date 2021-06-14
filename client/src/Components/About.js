@@ -26,12 +26,14 @@ const Wrapper = styled.div`
 
 const Blurb = styled.div`
   display: flex;
-  border: 1px solid blue;
+  border: 3px solid #add8e6;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 100%;
 `;
 
-const Copy = styled.p``;
+const Copy = styled.p`
+  border-bottom: 1px solid #add8e6;
+`;
 export default About;
