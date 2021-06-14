@@ -10,7 +10,11 @@ const About = () => {
           <Title>About Moodr:</Title>
           <Copy>
             Moodr is a simple social media platform that tells you how the world
-            is feeling in real time.
+            is feeling in real time. Just select an emotion from the menu, and
+            share. A pin will be dropped on your location indicating how you
+            feel. Feel free to click around and see how other users are feeling.
+            If you like this platform, be sure to follow our trello for upcoming
+            changes.
           </Copy>
         </Blurb>
       </Wrapper>
