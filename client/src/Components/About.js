@@ -13,8 +13,14 @@ const About = () => {
             is feeling in real time. Just select an emotion from the menu, and
             share. A pin will be dropped on your location indicating how you
             feel. Feel free to click around and see how other users are feeling.
-            If you like this platform, be sure to follow our trello for upcoming
-            changes.
+            If you like this platform, be sure to{" "}
+            <StyledLink
+              href="https://trello.com/b/FjZiyrLo/moodr-planned-updates"
+              target="_blank"
+            >
+              follow our trello
+            </StyledLink>{" "}
+            for upcoming changes.
           </Copy>
         </Blurb>
       </Wrapper>
@@ -41,6 +47,10 @@ const Blurb = styled.div`
   width: 50%;
   min-height: 100%;
   border: 3px solid #add8e6;
+  &:hover {
+    background-color: #add8e6;
+    color: white;
+  }
 `;
 
 const Copy = styled.p`
@@ -48,4 +58,10 @@ const Copy = styled.p`
   padding-top: 10px;
   font-size: 20px;
 `;
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: #a7beb9;
+`;
+
 export default About;
