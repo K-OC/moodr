@@ -6,10 +6,17 @@ const Footer = () => {
   return (
     <>
       <Wrapper>
-        <StyledLink to="#">about</StyledLink>
+        <StyledLink to="/about">about</StyledLink>
         <StyledLink to="#">contact</StyledLink>
-        <StyledLink to="#">media inquiries</StyledLink>
-        <StyledLink to="#">careers</StyledLink>
+        <StyledExternal
+          href="https://www.linkedin.com/in/kieran-oc/"
+          target="_blank"
+        >
+          linkedin
+        </StyledExternal>
+        <StyledExternal href="https://github.com/K-OC" target="_blank">
+          github
+        </StyledExternal>
       </Wrapper>
     </>
   );
@@ -20,11 +27,23 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  font-family: "Teko", sans-serif;
 `;
 
 const StyledLink = styled(Link)`
   color: lightgray;
   padding: 8px;
+  text-decoration: none;
+  &:hover {
+    border-bottom: solid 1px lightgray;
+  }
+`;
+
+const StyledExternal = styled.a`
+  color: lightgray;
+  padding: 8px;
+  text-decoration: none;
+  &:hover {
+    border-bottom: solid 1px lightgray;
+  }
 `;
 export default Footer;

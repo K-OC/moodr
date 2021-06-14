@@ -13,11 +13,12 @@ function Header() {
         <StyledHeader>
           <StyledLink to="/">Moodr</StyledLink>
         </StyledHeader>
-        <ContentWrapper>
-          <Navbar />
-          <Survey />
-        </ContentWrapper>
-
+        {window.location.pathname === "/".isExact ? (
+          <ContentWrapper>
+            <Navbar />
+            <Survey />
+          </ContentWrapper>
+        ) : null}
         <StyledSignIn>
           <StyledLink to="/signin">
             <StyledLogo src="../assets/crow.svg" />

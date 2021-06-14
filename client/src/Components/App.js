@@ -4,9 +4,7 @@ import styled from "styled-components";
 import { MapContainer } from "./MapContainer";
 import Header from "./Header";
 import StatsCard from "./StatsCard";
-import GetLocation from "./GetLocation";
-import Dropdown from "react-dropdown";
-// import { Survey } from "./Survey";
+import About from "./About";
 import GlobalStyle from "./GlobalStyles";
 import Footer from "./Footer";
 
@@ -23,8 +21,9 @@ function App() {
             <StatsCard />
             <MapContainer />
           </Wrapper>
-
-          {/* <DropdownMenu /> */}
+        </Route>
+        <Route path="/about">
+          <About />
         </Route>
       </Switch>
       <FooterWrapper>
@@ -37,7 +36,6 @@ const Wrapper = styled.div`
   display: flex;
   width: auto;
   position: relative;
-  font-family: var(--font-family);
 `;
 
 const SecondWrapper = styled.div`
