@@ -13,7 +13,7 @@ function Header() {
         <StyledHeader>
           <StyledLink to="/">Moodr</StyledLink>
         </StyledHeader>
-        {window.location.pathname === "/".isExact ? (
+        {window.location.pathname !== "/about" ? (
           <ContentWrapper>
             <Navbar />
             <Survey />
@@ -45,7 +45,7 @@ const TopOfPage = styled.header`
   justify-content: space-between;
   background-color: #add8e6;
   width: 100vw;
-  min-height: 15vh;
+  min-height: 8vh;
   margin: 0;
   padding: 0;
 `;
@@ -55,7 +55,7 @@ const StyledLogo = styled.img`
   width: 40px;
   background-color: #add8e6;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
 `;
 
 const StyledHeader = styled.span`
@@ -71,6 +71,7 @@ const StyledSignIn = styled.span`
   color: white;
   font-size: 20px;
   margin: 0;
+  padding-right: 10px;
   background-color: #add8e6;
 
   align-items: center;
@@ -80,6 +81,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
   background-color: #add8e6;
+  padding-left: 10px;
 `;
 
 const ContentWrapper = styled.div`

@@ -121,11 +121,11 @@ const UserPrompt = styled.p`
 `;
 
 const StyledInput = styled.input`
-  font-family: "Teko", sans-serif;
   font-size: 25px;
   border: none;
   width: fit-content;
   margin: 0;
+  border-bottom: 3px solid #add8e6;
 `;
 
 const StyledButton = styled.button`

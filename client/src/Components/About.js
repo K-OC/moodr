@@ -6,9 +6,12 @@ const About = () => {
   return (
     <>
       <Wrapper>
-        {" "}
         <Blurb>
-          <Copy>Pello</Copy>
+          <Title>About Moodr:</Title>
+          <Copy>
+            Moodr is a simple social media platform that tells you how the world
+            is feeling in real time.
+          </Copy>
         </Blurb>
       </Wrapper>
     </>
@@ -17,23 +20,28 @@ const About = () => {
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
 
   min-width: 50vw;
   min-height: 50vh;
   margin: 0;
   padding: 0;
+  margin-top: 10%;
 `;
-
+const Title = styled.h2``;
 const Blurb = styled.div`
   display: flex;
-  border: 3px solid #add8e6;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  flex-direction: column;
+  width: 50%;
   min-height: 100%;
+  border: 3px solid #add8e6;
 `;
 
 const Copy = styled.p`
-  border-bottom: 1px solid #add8e6;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
 `;
 export default About;
