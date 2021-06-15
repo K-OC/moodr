@@ -47,7 +47,6 @@ export const CurrentUserProvider = ({ children }) => {
     fetch("/api/getallmoods")
       .then((response) => response.json())
       .then((json) => {
-        console.log("test.", json);
         setMoodrList(json.data);
       });
   }, []);
