@@ -64,9 +64,10 @@ export const MapContainer = () => {
     zoom,
     setZoom,
   } = useContext(CurrentUserContext);
+  const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   const [clicked, setClicked] = useState([]);
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCGKxCtMtptCd2bJyvZr1KjkSpt3RXCD9U",
+    googleMapsApiKey: apiKey,
     libraries,
   });
 

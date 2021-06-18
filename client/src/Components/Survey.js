@@ -72,7 +72,7 @@ export const Survey = () => {
     );
     const date = new Date();
     let emoObj = {};
-    emoObj.emoDate = format(date, "EEEE,MMMM do, yyyy hh:mm a");
+    emoObj.emoDate = format(date, "EEEE, MMMM do, yyyy hh:mm a");
     emoObj.name = userEmotion.name;
     emoObj.lat = lat;
     emoObj.lng = lng;
