@@ -6,7 +6,7 @@
 
 ---
 
-## what's moodr?
+## What's moodr?
 
 moodr is an app that let's users track how they feel by dropping pins in their location. Simply select an emotion from the drop down menu, then share how you feel. The feed and map components of the app allow users to click around and check the emotional state of a geographic location. 
 ---
