@@ -1,3 +1,4 @@
+![app lol](https://user-images.githubusercontent.com/78660466/123790935-73e6ff80-d8b9-11eb-8976-4d71c3a6c09d.JPG)
 <h1 align="center"> moodr </h1>
 
 > Note: Welcome to moodr! This project was my final assessment at Concordia University's Web Development Bootcamp. 
